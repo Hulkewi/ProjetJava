@@ -30,7 +30,7 @@ public class MainApp extends Application {
         EventServices ser=new EventServices();
         java.sql.Date date = new java.sql.Date(Calendar.getInstance().getTime().getTime());
         Event e =new Event(date,"address2","title2","desc2","pic2");
-        ser.UpdateEvent(e,6);
+        ser.DeleteEvent(6);
      
         
 
