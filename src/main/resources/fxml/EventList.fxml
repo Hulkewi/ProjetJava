@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1150.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.piblogfashion.EventListController">
+    <stylesheets>
+        <URL value="@/styles/eventlist.css" />
+    </stylesheets>
+    <children>
+        <TableView fx:id="table" layoutX="93.0" layoutY="72.0" prefHeight="384.0" prefWidth="189.0">
+            <columns>
+                <TableColumn fx:id="event_title" prefWidth="75.0" text="event_title" />
+                <TableColumn fx:id="event_date" prefWidth="75.0" text="event_date" />
+            </columns>
+        </TableView>
+      <TextField fx:id="tf_title" layoutX="405.0" layoutY="90.0" />
+      <TextField fx:id="tf_desc" layoutX="405.0" layoutY="135.0" />
+      <TextField fx:id="tf_address" layoutX="404.0" layoutY="188.0" />
+      <DatePicker fx:id="dp_date" layoutX="405.0" layoutY="244.0" />
+      <ImageView fx:id="iv_pic" fitHeight="103.0" fitWidth="180.0" layoutX="358.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true" />
+      
+      <Label layoutX="336.0" layoutY="94.0" text="Title" />
+      <Label layoutX="317.0" layoutY="139.0" text="Description" />
+      <Label layoutX="326.0" layoutY="192.0" text="Address" />
+      <Label layoutX="335.0" layoutY="248.0" text="Date" />
+      <Button fx:id="btn_add" layoutX="317.0" layoutY="445.0" mnemonicParsing="false" onAction="#event_add" text="Add" />
+      <Button fx:id="btn_update" disable="true" layoutX="378.0" layoutY="445.0" mnemonicParsing="false" onAction="#event_update" text="Update" />
+      <Button fx:id="btn_delete" disable="true" layoutX="454.0" layoutY="445.0" mnemonicParsing="false" onAction="#event_delete" text="Delete" />
+      <Button fx:id="btn_clear" layoutX="533.0" layoutY="445.0" mnemonicParsing="false" onAction="#clear" text="Clear" />
+      <TextField fx:id="recherche" layoutX="93.0" layoutY="35.0" />
+      <Button fx:id="btn_pic" layoutX="553.0" layoutY="331.0" mnemonicParsing="false" onAction="#upload" text="Upload" />
+      <Label layoutX="364.0" layoutY="335.0" prefHeight="17.0" prefWidth="103.0" text="Put your image !" />
+
+    </children>
+</AnchorPane>

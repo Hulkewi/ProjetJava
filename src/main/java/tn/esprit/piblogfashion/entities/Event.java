@@ -19,6 +19,9 @@ public class Event {
     private String event_desc;
     private String event_pic;
 
+    public Event() {
+    }
+
     public int getEvent_id() {
         return event_id;
     }
@@ -73,6 +76,11 @@ public class Event {
         this.event_title = event_title;
         this.event_desc = event_desc;
         this.event_pic = event_pic;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" + "event_id=" + event_id + ", event_date=" + event_date + ", event_address=" + event_address + ", event_title=" + event_title + ", event_desc=" + event_desc + ", event_pic=" + event_pic + '}';
     }
 
 }
